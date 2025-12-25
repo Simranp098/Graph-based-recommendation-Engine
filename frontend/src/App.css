@@ -1,0 +1,145 @@
+/* --- Global Styles & App Container --- */
+body {
+  background-color:#DCDCDC !important; /* A light, modern background */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #334155;
+}
+
+.App {
+  text-align: center;
+  max-width: 1100px; /* A wider container for the grid */
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 
+#FFFAFA;
+}
+
+/* --- Header & Title Styling --- */
+.App-header {
+  padding: 0;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.App-header p {
+  font-size: 1.15rem;
+  color: #64748b;
+  margin-top: 0;
+}
+
+/* --- Dropdown Menu Styling --- */
+.user-select-container {
+  margin-bottom: 2rem;
+}
+
+.user-select-label {
+  font-weight: 500;
+  color: #475569;
+  margin-right: 1rem;
+}
+
+#user-select {
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  min-width: 250px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+#user-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+/* --- Recommendation Grid & Cards --- */
+.recommendations-container h3 {
+  color: #1e293b;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.recommendation-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Stagger the animation for each card */
+.recommendation-card:nth-child(1) { animation-delay: 0.1s; }
+.recommendation-card:nth-child(2) { animation-delay: 0.2s; }
+.recommendation-card:nth-child(3) { animation-delay: 0.3s; }
+.recommendation-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recommendation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.recommendation-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.recommendation-card .category {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.recommendation-card .reason {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* --- Utility & Loading Spinner Styles --- */
+.loading-spinner, .error-text, .placeholder-text {
+  margin-top: 2rem;
+}

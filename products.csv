@@ -1,0 +1,26 @@
+id,name,price,category
+A01,Mobile,35000,Electronics
+A02,TV,65000,Electronics
+A03,Headphone,2000,Electronics
+A04,Laptop,95000,Electronics
+A05,Watch,1500,Electronics
+B01,Jeans,999,Clothing
+B02,T-shirt,799,Clothing
+B03,Kurta,1999,Clothing
+B04,Saree,2449,Clothing
+B05,Belt,499,Clothing
+C01,Bedsheet,1999,Home & Furniture
+C02,Mattres,999,Home & Furniture
+C03,Chair,899,Home & Furniture
+C04,Gas-stove,599,Home & Furniture
+C05,Wall Clock,999,Home & Furniture
+D01,Oil-Ghee,499,Grocery
+D02,Detergent,299,Grocery
+D03,Snacks,199,Grocery
+D04,Salt,199,Grocery
+D05,Atta,699,Grocery
+E01,Tracker,2999,Sports
+E02,Yoga-Mat,1599,Sports
+E03,Jump-rope,399,Sports
+E04,Band,1499,Sports
+E05,Shoes,2999,Sports

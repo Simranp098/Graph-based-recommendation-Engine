@@ -1,0 +1,13 @@
+# backend/app/models/schemas.py
+from pydantic import BaseModel
+from typing import List
+
+class Product(BaseModel):
+    product_id: str
+    name: str
+    category: str
+    price: float
+
+class RecommendationsResponse(BaseModel):
+    user_id: int
+    recommendations: List[Product]
